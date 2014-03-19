@@ -1,0 +1,101 @@
+%% Local IspellDict: brasileiro
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{pibic}
+
+\newcommand{\eng}[1]{\textit{#1}}
+\newcommand{\opus}[1]{\textit{#1}}
+\newcommand{\ok}{
+  \multicolumn{1}{>{\columncolor[gray]{.6}}c}{}
+}
+\newcommand{\red}[1]{{\color{red}{[#1]}}}
+
+%% http://lattes.cnpq.br/3672057701593524
+
+\begin{document}
+
+\cabecalho{Projeto de Pesquisa do Orientador}
+
+\dadosProjetoOrientador
+{Título do projeto}
+{Nome do orientador}
+{Grupo de pesquisa}
+{palavras-chave}
+{Dados do edital}
+{ano}
+
+\newpage
+
+\singlespace
+
+\Section{Objetivos e Justificativa}
+
+\paragraph{Objetivos}
+\label{sec:objetivos}
+
+\paragraph{Justificativa}
+\label{sec:justificativa}
+
+
+\Section{Metodologia}
+% Descrição da maneira como serão desenvolvidas as atividades para se
+% chegar aos objetivos propostos. Indicar os materiais e métodos que
+% serão usados.
+
+\Section{Viabilidade e financiamento}
+% Argumentação clara e sucinta, demonstrando a viabilidade do projeto
+% e seus financiamentos (se existentes) com fonte e período de
+% execução.
+
+\Section{Resultados e impactos esperados}
+% Relação dos resultados ou produtos que se espera obter após o
+% término da pesquisa.
+
+
+\Section{Cronograma de execução}
+% Relação itemizada das atividades previstas, em ordem seqüencial e
+% temporal, de acordo com os objetivos traçados no projeto e dentro do
+% período proposto.
+
+Conforme a metodologia, as atividades previstas deste projeto
+ocorrerão simultaneamente de modo contínuo. Dessa forma a maioria das
+atividades ocorrerão durante todo o seu período de vigência.
+
+\begin{tabular}{l|cccc}
+  & \multicolumn{4}{c}{Trimestres}\\
+  Atividades& 1 & 2 & 3 & 4 \\
+  \hline
+  X&\ok&\ok&\ok&\ok\\
+
+\end{tabular}
+\addcontentsline{toc}{section}{\refname}
+
+% Relação itemizada das referências que subsidiam a proposta de
+% pesquisa, colocando as mais importantes. maximo de 10
+
+\renewcommand{\refname}{
+  \hrule\vspace{1em}
+  \hspace{1.5em}{\hspace{.5em}Referências
+    Bibliográficas (máximo de 10 referências)}
+  \vspace{1em}\hrule
+}
+
+%\nocite{}
+
+% \bibliographystyle{plain}
+% \bibliography{references}
+
+\Section{Detalhamento dos orientandos de graduação}
+
+\vspace{3em}\hspace{-2em}
+Salvador, \today{}
+
+\vspace{3em}\hspace{-2em}
+Nome do orientador
+
+\end{document}

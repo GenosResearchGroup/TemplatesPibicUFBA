@@ -1,0 +1,145 @@
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{times}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{colortbl}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\titleformat{\section}[block]
+{\bfseries\normalsize\sffamily} % format
+{\hspace{1.5em}} %label
+{.5em} %sep
+{\hspace{1.5em}\bfseries\vspace{-.1cm}} %before
+
+\newcommand{\Section}[1]{
+  \begin{minipage}{1.0\linewidth}
+    \vspace{1cm}
+    \hrule
+    \vspace{.3cm}
+    \section{#1}
+    \hrule
+    \vspace{.3cm}
+  \end{minipage}
+}
+
+\newcommand{\info}[1]{
+  %{\footnotesize \hspace*{1cm} \parbox{12cm}{\textcolor{red}{\textit{#1}}}}
+  %\vspace{.5cm}
+}
+
+\newcommand{\tempo}[1]{(\textsf{#1})}
+
+\newcommand{\texttitulo}[1]{
+  \textsf{#1}
+}
+
+\newcommand{\texttitulocolor}[1]{
+  \texttitulo{\textbf{#1}}
+}
+
+\newcommand{\textdatacolor}[1]{
+  \textcolor{blue}{\texttitulo{#1}}
+}
+
+\newcommand{\dadosProjetoOrientador}[6]{
+  \fancyfoot[RE,LO]{\textcolor[gray]{0.5}{PROJETO DE PESQUISA DO ORIENTADOR}}
+
+  \begin{center}
+    \begin{tabular}{ | p{12cm}| }
+      \hline
+      \texttitulocolor{EDITAL / PROGRAMA:} \\
+      \hline
+      \textdatacolor{#5} \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  \begin{center}
+    \texttitulocolor{Orientador}
+    \begin{framed}
+      \textdatacolor{#2}
+    \end{framed}
+    \vspace{2em}
+    \texttitulocolor{Título do Projeto}
+    \begin{framed}
+      \textdatacolor{#1}
+    \end{framed}
+    \vspace{2em}
+    \texttitulocolor{Palavras Chave}
+    \begin{framed}
+      \textdatacolor{#4}
+    \end{framed}
+    \vspace{2em}
+    \texttitulocolor{Grupo de Pesquisa}
+    \begin{framed}
+      \textdatacolor{#3}
+    \end{framed}
+    \vfill
+    \texttitulocolor{Salvador}\\\texttitulocolor{#6}
+  \end{center}
+}
+
+\newcommand{\dadosBolsista}[4]{
+  \fancyfoot[RE,LO]{\textcolor[gray]{0.5}{PLANO DE TRABALHO DO BOLSISTA}}
+
+  \begin{center}
+    \begin{tabular}{ | p{12cm}| }
+      \hline
+      \texttitulocolor{EDITAL / PROGRAMA:} \\
+      \hline
+      \textdatacolor{#3} \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  \begin{center}
+    \texttitulocolor{Título do Plano de Trabalho}
+    \begin{framed}
+      \textdatacolor{#1}
+    \end{framed}
+    \vspace{2em}
+    \texttitulocolor{Orientador}
+    \begin{framed}
+      \textdatacolor{#2}
+    \end{framed}
+    \vspace{2em}
+    \vfill
+    \texttitulocolor{Salvador}\\\texttitulocolor{#4}
+  \end{center}
+}
+
+\newcommand{\cabecalho}[1]{
+  \pagestyle{fancy}
+  \fancyhead{} % clear all header fields
+  \renewcommand{\headrulewidth}{0pt} % no line in header area
+  \setlength{\headheight}{6em}
+  \setlength{\textheight}{60em}
+
+  \lhead{
+    \includegraphics[scale=.1]{ufbaselo}
+  }
+  \chead{
+    \begin{center}
+      {\large \textbf{UNIVERSIDADE FEDERAL DA BAHIA}} \\
+      \textbf{PRÓ-REITORIA DE PESQUISA, CRIAÇÃO E INOVAÇÃO} \\
+      \textbf{\textit{COORDENAÇÃO DE INICIAÇÃO E INTERNACIONALIZAÇÃO}}
+    \end{center}
+  }
+  \rhead{
+    \includegraphics[scale=.7]{pibic.png}
+  }
+
+  \fancyfoot{} % clear all footer fields
+  \fancyfoot[LE,RO]{Pág. \thepage/\pageref{LastPage}} % page number in "outer" position of footer line
+
+  \begin{center}
+    {\Large \textbf{\textit{#1}}}
+  \end{center}
+}
